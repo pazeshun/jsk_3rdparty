@@ -21,11 +21,11 @@ generate_messages()
 catkin_package(CATKIN_DEPENDS message_runtime)
 
 if("${CMAKE_SIZEOF_VOID_P}" STREQUAL "4")
-  set(VT_LIB_ARCH x86_32/)
+  set(VT_LIB_ARCH LINUX32_GLIBC3/)
 elseif("${CMAKE_SIZEOF_VOID_P}" STREQUAL "8")
-  set(VT_LIB_ARCH x86_64/)
+  set(VT_LIB_ARCH LINUX64_GLIBC3/)
 endif()
-set(VT_LIB_PATH /usr/vt/sayaka/M16/bin/${VT_LIB_ARCH}RAMIO/libvt_jpn.so)
+set(VT_LIB_PATH /usr/vt/risa/H16/bin/${VT_LIB_ARCH}RAMIO/libvt_jpn.so)
 
   include_directories(
     ${Boost_INCLUDE_DIRS}

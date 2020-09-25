@@ -21,7 +21,7 @@
 #ifdef USE_DUMMY_INCLUDE
 #include "dummy/vt_dummy.h"
 #else
-#include "/usr/vt/sayaka/M16/inc/vt_jpn.h"
+#include "/usr/vt/risa/H16/inc/vt_jpn.h"
 #endif
 
 namespace fs = boost::filesystem;
@@ -32,7 +32,7 @@ public:
   typedef voice_text::VoiceTextConfig Config;
 
   VoiceText() : nh_(), pnh_("~"), db_path_(""), license_path_(""), dyn_srv_(pnh_) {
-    pnh_.param<std::string>("db_path", db_path_, "/usr/vt/sayaka/M16");
+    pnh_.param<std::string>("db_path", db_path_, "/usr/vt/risa/H16");
     pnh_.param<std::string>("license_path", license_path_, "");
 
     dynamic_reconfigure::Server<Config>::CallbackType f =
